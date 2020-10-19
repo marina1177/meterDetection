@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  application:
+    image: application:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/application
+    ports:
+      - 8080:8080
